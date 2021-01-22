@@ -1,0 +1,48 @@
+.container {
+  position: relative;
+  width: 80%;
+  height: 100vh;
+  margin: auto;
+  z-index: -1;
+}
+
+#carrousel_back {
+  position: absolute;
+  z-index: 15;
+  left: 12%;
+  top: 50%;
+  color: blue;
+}
+
+#carrousel_next {
+  position: absolute;
+  z-index: 15;
+  right: 12%;
+  top: 50%;
+  color: blue;
+}
+
+.container__img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  overflow: hidden;
+  transition: all 1s linear;
+  opacity: 1;
+}
+
+.container__number{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.none {
+  display: none;
+}
+
+.visuallyhidden {
+  opacity: 0.4;
+}
