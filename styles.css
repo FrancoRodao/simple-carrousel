@@ -24,9 +24,7 @@
   width: 100%;
   object-fit: cover;
   overflow: hidden;
-  /* object-position: 50% 50%; */
-  /* transition: all 0.5s linear; */
-  /* opacity: 1; */
+  object-position: 50% 50%;
 }
 
 .container__number{

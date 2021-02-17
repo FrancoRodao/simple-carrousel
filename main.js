@@ -46,33 +46,14 @@ document.getElementById('carrousel_next').addEventListener('click', (e) => {
 document.getElementById('carrousel_back').addEventListener('click', (e) => {
     e.preventDefault()
     imgIndex--
-
+    const xd = document.getElementsByClassName("container")[0]
     if (imgIndex == -1) {
-        imgIndex = imagesCarrousel.length-1 
+        console.log('xd')
+        imgIndex = imagesCarrousel.length-1
+        xd.scrollLeft += xd.offsetWidth * imagesCarrousel.length
+        return
     }
-
-
-    for (let index = 0; index < childNodesImagesContainer.length; index++) {
-        const img = childNodesImagesContainer[index];
-        console.log(img)
-        if(img.nodeName === "SPAN"){
-            return
-        }
-
-        if (index == imgIndex) {
-            if (img.classList.contains('none')) {
-                img.classList.remove('none')
-                setTimeout(function () {
-                    img.classList.remove('visuallyhidden')
-                }, 20)
-            }else{
-                img.classList.add('visuallyhidden')
-            }
-            continue
-        }
-        img.classList.add('visuallyhidden')
-        img.classList.add('none')
-    }
+    xd.scrollLeft -= xd.offsetWidth
 
 })
 
